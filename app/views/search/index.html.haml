@@ -1,0 +1,13 @@
+- @posts.each  do |post|
+  .posts_all
+    .post-name-box
+      .post-title
+        = post.title
+      .post-name
+      = post.name
+    = image_tag"#{post.image}",class:"preview",size:'30×30'
+    .post-text
+      = post.text
+    = link_to '削除', "/posts/#{post.id}", method: :delete
+    .post-good
+      いいね

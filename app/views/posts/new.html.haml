@@ -1,0 +1,11 @@
+.new-post
+  = form_with(model:@post, local: true) do |form|
+    .new
+      = form.text_field :name, placeholder: "投稿者" ,class:"new-name"
+      = form.text_field :title, placeholder: "お題" ,class:"title"
+    .preview
+    .new-image
+      = form.file_field :image, placeholder: "クリック",class:"image"
+    .new-text
+      = form.text_area :text, placeholder: "内容 検索のためハッシュタグ(#)をつけてください"  ,class:"text"
+    = form.submit "送信" ,class:"btn"
