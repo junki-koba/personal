@@ -14,7 +14,7 @@
         %h1.apri-title
         =link_to " bokeboke" ,root_path ,class:"apri-title"
         -# =link_to "#{current_user.name}"
-        = current_user.name
+        -# = current_user.name
       %a.new-btn{href: "/posts/new"} ボケる
       = form_with(url:search_posts_path, local: true,method: :get) do |form|
         .search-box
