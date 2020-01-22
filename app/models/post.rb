@@ -5,6 +5,6 @@ class Post < ApplicationRecord
     return Post.all unless search
     Post.where('text LIKE(?)', "%#{search}%")
   end
-  # validates :text,:title,:image,:name, presence: true
+  
 
 end
